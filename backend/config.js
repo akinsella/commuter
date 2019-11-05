@@ -54,7 +54,8 @@ function populateS3Options(env): Object {
       accessKeyId: env.COMMUTER_S3_KEY,
       // required secret
       secretAccessKey: env.COMMUTER_S3_SECRET,
-      endpoint: s3Endpoint
+      endpoint: s3Endpoint,
+      s3ForcePathStyle: env.S3_FORCE_PATH_STYLE
     },
     s3PathDelimiter,
     s3BasePrefix

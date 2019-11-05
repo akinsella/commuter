@@ -10,6 +10,7 @@ export function createRouter(config: Object): express.Router {
   router.get(
     "/*",
     s3Proxy({
+      s3ForcePathStyle: config.s3.s3ForcePathStyle,
       bucket: config.s3.params.Bucket,
       prefix: config.s3BasePrefix,
       accessKeyId: config.s3.accessKeyId,
